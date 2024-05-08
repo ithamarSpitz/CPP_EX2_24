@@ -1,37 +1,50 @@
-Algorithms.hpp and Algorithms.cpp:
+# Graph Algorithms Library
 
+This library provides implementations of various graph algorithms in C++. Below is a brief description of each algorithm and its corresponding function in the library.
 
-bool Algorithms::isConnected(const Graph& g)
-Algorithm: Depth First Search (DFS)
-Description: Checks if the graph is connected by performing a DFS traversal from a starting vertex and checking if all vertices are visited.
+## Algorithms.hpp and Algorithms.cpp
 
-std::string Algorithms::shortestPath(const Graph& g, int start, int end)
-Algorithm: Dijkstra's Algorithm
-Description: Finds the shortest path from a starting vertex to an ending vertex using Dijkstra's algorithm.
+### isConnected
 
-bool Algorithms::isContainsCycle(const Graph& g)
-Algorithm: Depth First Search (DFS) with cycle detection
-Description: Checks if the graph contains any cycles by performing a DFS traversal and keeping track of vertices in the recursion stack.
+**Algorithm:** Depth First Search (DFS)  
+**Description:** Checks if the graph is connected by performing a DFS traversal from a starting vertex and checking if all vertices are visited.  
+[Further reference](https://en.wikipedia.org/wiki/Depth-first_search)
 
-std::string Algorithms::isBipartite(const Graph& g)
-Algorithm: Bipartite Graph Check
-Description: Checks if the graph is bipartite by assigning colors to vertices and ensuring adjacent vertices have different colors.
+### shortestPath
 
-bool Algorithms::negativeCycle(const Graph& g)
-Algorithm: Bellman-Ford Algorithm
-Description: Detects if the graph contains a negative cycle using the Bellman-Ford algorithm.
+**Algorithm:** Dijkstra's Algorithm  
+**Description:** Finds the shortest path from a starting vertex to an ending vertex using Dijkstra's algorithm.  
+[Further reference](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
+### isContainsCycle
 
-Graph.hpp and Graph.cpp:
+**Algorithm:** Depth First Search (DFS) with cycle detection  
+**Description:** Checks if the graph contains any cycles by performing a DFS traversal and keeping track of vertices in the recursion stack.  
+[Further reference](https://en.wikipedia.org/wiki/Cycle_detection#Depth-First_Search)
 
+### isBipartite
 
-void Graph::loadGraph(const std::vector<std::vector<int>>& graph)
-Description: Loads a graph represented by its adjacency matrix into the Graph object.
+**Algorithm:** Bipartite Graph Check  
+**Description:** Checks if the graph is bipartite by assigning colors to vertices and ensuring adjacent vertices have different colors.  
+[Further reference](https://en.wikipedia.org/wiki/Bipartite_graph)
 
-void Graph::printGraph() const
-Description: Prints the adjacency matrix of the graph.
+### negativeCycle
 
-const std::vector<std::vector<int>>& Graph::getAdjacencyMatrix() const
-Description: Returns the adjacency matrix of the graph.
+**Algorithm:** Bellman-Ford Algorithm  
+**Description:** Detects if the graph contains a negative cycle using the Bellman-Ford algorithm.  
+[Further reference](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
 
-Please note that the provided code snippets contain comments with URLs to the original sources of the algorithms for further reference.
+## Graph.hpp and Graph.cpp
+
+### loadGraph
+
+**Description:** Loads a graph represented by its adjacency matrix into the Graph object.
+
+### printGraph
+
+**Description:** Prints the adjacency matrix of the graph.
+
+### getAdjacencyMatrix
+
+**Description:** Returns the adjacency matrix of the graph.
+
