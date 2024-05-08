@@ -1,29 +1,37 @@
-# מטלה 1 - גרפים (Classes and Namespaces)
+Algorithms.hpp and Algorithms.cpp:
 
-המטרה שלכם במטלה הזאת היא ליצור מחלקה שמייצגת גרף ולממש אלגוריתמים על הגרפים (זה הזמן להזכר בקורס אלגוריתמים 1).
 
-במטלה הזאת הייצוג של הגרף שלכם יתבצע בעזרת מטריצת שכנויות - https://he.wikipedia.org/wiki/%D7%9E%D7%98%D7%A8%D7%99%D7%A6%D7%AA_%D7%A9%D7%9B%D7%A0%D7%95%D7%AA.
+bool Algorithms::isConnected(const Graph& g)
+Algorithm: Depth First Search (DFS)
+Description: Checks if the graph is connected by performing a DFS traversal from a starting vertex and checking if all vertices are visited.
 
-הגרף יכול להיות גרף מכוון ולא מכוון וגם גרף ממושקל. מטריצת השכנויות חייבת להיות מטריצה ריבועית.
+std::string Algorithms::shortestPath(const Graph& g, int start, int end)
+Algorithm: Dijkstra's Algorithm
+Description: Finds the shortest path from a starting vertex to an ending vertex using Dijkstra's algorithm.
 
-עליכם לכתוב את הקבצים הבאים:
+bool Algorithms::isContainsCycle(const Graph& g)
+Algorithm: Depth First Search (DFS) with cycle detection
+Description: Checks if the graph contains any cycles by performing a DFS traversal and keeping track of vertices in the recursion stack.
 
-```
-Graph.cpp
-Algorithms.cpp
-```
+std::string Algorithms::isBipartite(const Graph& g)
+Algorithm: Bipartite Graph Check
+Description: Checks if the graph is bipartite by assigning colors to vertices and ensuring adjacent vertices have different colors.
 
-הקובץ `Graph.cpp` מכיל מחלקה המייצגת גרף.
-המחלקה מכילה את הפעולות `loadGraph` המקבלת מטריצת שכנויות וטוענת אותה לתוך הגרף ו-`printGraph` שמדפיסה את הייצוג של הגרף (הפורמט לבחירתכם, ראו דוגמה ב-`Demo.cpp`).
+bool Algorithms::negativeCycle(const Graph& g)
+Algorithm: Bellman-Ford Algorithm
+Description: Detects if the graph contains a negative cycle using the Bellman-Ford algorithm.
 
-הקובץ `Algorithms.cpp` מכיל מימושים לאלגוריתמים על גרפים. ביניהם:
 
-- `isConnected(g)` - האלגוריתם מקבל גרף ומחזיר 1 אם הגרף קשיר (אחרת מחזיר 0).
-- `shortestPath(g,start,end)` - האלגוריתם מקבל גרף, קודקוד התחלה וקודקוד סיום ומחזיר את המסלול הקל ביותר (במקרה שהגרף לא ממושקל - הקצר ביותר) בין שני הקודקודים. במידה ואין מסלול כזה, האלגוריתם יחזיר -1.
-- `isContainsCycle(g)` - האלגוריתם מקבל גרף ומדפיס מעגל כלשהו. אם לא קיים מעגל בגרף, האלגוריתם יחזיר 0.
-- `isBipartite(g)` - האלגוריתם מקבל גרף ומחזיר את החלוקה של הגרף לגרף דו-צדדי. אם אי אפשר לחלק את הגרף, האלגוריתם יחזיר 0.
-- `negativeCycle(g)` - האלגוריתם מקבל גרף ומוצא מעגל שלילי (כלומר מעגל שסכום המשקלים של הצלעות שלילי). אם לא קיים מעגל כזה, האלגוריתם ידפיס שלא קיים מעגל שלילי.
+Graph.hpp and Graph.cpp:
 
-הקובץ `Demo.cpp` מכיל דוגמאות של קלטים ופלטים.
-עליכם לכתוב בתחילת כל קובץ את מספר תעודת הזהות שלכם ואת המייל. כמו כן, בנוסף לקבצים של המטלה אתם נדרשים להגיש גם קובץ README המתאר את אופן המימוש ואת החלוקה שביצעתם בקוד (סוג של מדריך משתמש). אי עמידה בהנחיות תגרור הפחתה בציון. בהצלחה!
-  
+
+void Graph::loadGraph(const std::vector<std::vector<int>>& graph)
+Description: Loads a graph represented by its adjacency matrix into the Graph object.
+
+void Graph::printGraph() const
+Description: Prints the adjacency matrix of the graph.
+
+const std::vector<std::vector<int>>& Graph::getAdjacencyMatrix() const
+Description: Returns the adjacency matrix of the graph.
+
+Please note that the provided code snippets contain comments with URLs to the original sources of the algorithms for further reference.
