@@ -1,6 +1,6 @@
 # Graph Algorithms Library
 
-This library provides implementations of various graph algorithms in C++. Below is a brief description of each algorithm and its corresponding function in the library.
+This library provides implementations of various graph algorithms in C++. Below is a brief description of each function in the library and its corresponding algorithm.
 
 ## Algorithms.hpp and Algorithms.cpp
 

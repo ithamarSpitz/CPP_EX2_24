@@ -1,4 +1,6 @@
-// algorithms.cpp
+//5249
+//itamar.shpitzer@msmail.ariel.ac.il
+
 
 #include "Algorithms.hpp"
 #include <vector>
@@ -203,4 +205,4 @@ namespace ariel {
         return hasCycle;
     }
 
-} // namespace ariel
+}

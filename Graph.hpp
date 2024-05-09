@@ -1,3 +1,6 @@
+//5249
+//itamar.shpitzer@msmail.ariel.ac.il
+
 #ifndef GRAPH_HPP
 #define GRAPH_HPP
 
@@ -27,6 +30,6 @@ namespace ariel {
         const std::vector<std::vector<int>>& getAdjacencyMatrix() const;
     };
 
-} // namespace ariel
+}
 
 #endif // GRAPH_HPP

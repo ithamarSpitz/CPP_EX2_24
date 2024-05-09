@@ -1,3 +1,6 @@
+//5249
+//itamar.shpitzer@msmail.ariel.ac.il
+
 #ifndef ALGORITHMS_HPP
 #define ALGORITHMS_HPP
 
@@ -25,6 +28,6 @@ namespace ariel {
         static bool negativeCycle(const Graph& g);
     };
 
-} // namespace ariel
+}
 
 #endif // ALGORITHMS_HPP

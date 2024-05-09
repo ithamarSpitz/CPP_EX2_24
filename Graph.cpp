@@ -1,3 +1,6 @@
+//5249
+//itamar.shpitzer@msmail.ariel.ac.il
+
 #include "Graph.hpp"
 #include <iostream>
 using namespace std;
@@ -31,4 +34,4 @@ namespace ariel {
         return adjacencyMatrix;
     }
 
-} // namespace ariel
+}
