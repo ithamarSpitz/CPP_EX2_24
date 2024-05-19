@@ -48,3 +48,22 @@ This library provides implementations of various graph algorithms in C++. Below 
 
 **Description:** Returns the adjacency matrix of the graph.
 
+## Explanation of Functions in Graph.cpp
+
+- **Graph::Graph:** Constructor for the Graph class.
+- **Graph::~Graph:** Destructor for the Graph class.
+- **Graph::loadGraph:** Loads a graph represented by its adjacency matrix into the Graph object. It checks if the matrix is square, and if not, it throws an invalid argument exception.
+- **Graph::printGraph:** Prints the adjacency matrix of the graph as a string.
+- **Graph::getAdjacencyMatrix:** Returns a constant reference to the adjacency matrix of the graph.
+- **Graph::operator+:** Performs matrix addition between two graphs. It checks if the matrices have the same dimensions, and if not, it throws an invalid argument exception.
+- **Graph::operator-:** Performs matrix subtraction between two graphs. It utilizes the addition operator and negation.
+- **Graph::operator*:** Performs scalar multiplication with the graph's adjacency matrix or matrix multiplication between two graphs. It checks if the matrices have the same dimensions for matrix multiplication.
+- **Graph::operator++:** Increases all edge weights in the graph by 1.
+- **Graph::operator--:** Decreases all edge weights in the graph by 1.
+- **Graph::operator+=:** Performs addition assignment between two graphs.
+- **Graph::operator-=:** Performs subtraction assignment between two graphs.
+- **Graph::operator==, operator>, operator>=, operator<, operator<=, operator!=:** Implements comparison operators for graphs based on their adjacency matrices.
+- **Graph::operator+(const int scalar), operator-(const int scalar), operator++(), operator--():** Implements unary and binary operators for scalar operations and increment/decrement operations.
+- **operator+(const int scalar, const Graph& matrix), operator-(const int scalar, const Graph& matrix):** Performs addition and subtraction between a scalar and a graph, respectively.
+- **Graph::operator+, operator-:** Implements unary plus and minus operators for graphs.
+- **Graph::operator<<:** Overrides the << operator to print the adjacency matrix of a graph.
