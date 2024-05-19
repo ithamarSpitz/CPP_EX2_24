@@ -183,24 +183,7 @@ namespace ariel {
         return matrix * scalar;
     }
 
-    bool Graph::operator==(const Graph& other) const {
-        if (adjacencyMatrix.size() != other.adjacencyMatrix.size()) {
-            return false; // Graphs are of different order
-        }
-
-        for (size_t i = 0; i < adjacencyMatrix.size(); ++i) {
-            if (adjacencyMatrix[i] != other.adjacencyMatrix[i]) {
-                return false; // Graphs have different edges or weights
-            }
-        }
-
-        return true; // Graphs are equal
-    }
-
     bool Graph::operator>(const Graph& other) const {
-        if (*this == other) {
-            return false; // Graphs are equal
-        }
         // Compare number of edges
         int edgesThis = 0;
         for (size_t i = 0; i < adjacencyMatrix.size(); ++i) {
@@ -220,6 +203,10 @@ namespace ariel {
         }
         // Compare order of magnitude
         return adjacencyMatrix.size() > other.adjacencyMatrix.size();
+    }
+
+    bool Graph::operator==(const Graph& other) const {
+        return (!(other > *this)) && (!(*this > other));
     }
 
     bool Graph::operator>=(const Graph& other) const {
