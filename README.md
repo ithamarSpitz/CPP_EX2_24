@@ -36,20 +36,6 @@ This library provides implementations of various graph algorithms in C++. Below 
 
 ## Graph.hpp and Graph.cpp
 
-### loadGraph
-
-**Description:** Loads a graph represented by its adjacency matrix into the Graph object.
-
-### printGraph
-
-**Description:** Prints the adjacency matrix of the graph.
-
-### getAdjacencyMatrix
-
-**Description:** Returns the adjacency matrix of the graph.
-
-## Explanation of Functions in Graph.cpp
-
 - **Graph::Graph:** Constructor for the Graph class.
 - **Graph::~Graph:** Destructor for the Graph class.
 - **Graph::loadGraph:** Loads a graph represented by its adjacency matrix into the Graph object. It checks if the matrix is square, and if not, it throws an invalid argument exception.
