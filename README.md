@@ -62,9 +62,8 @@ This library provides implementations of various graph algorithms in C++. Below 
 - **Graph::operator--:** Decreases all edge weights in the graph by 1.
 - **Graph::operator+=:** Performs addition assignment between two graphs.
 - **Graph::operator-=:** Performs subtraction assignment between two graphs.
-- **Graph::operator==:** Comparison operator for graphs, checks if they have the same amount of edges and nodes.
 - **Graph::operator>:** Implements comparison operators for graphs, checks which has more edges and if equal checks which has more nodes.
-- **Graph::operator>=, operator<, operator<=, operator!=:** Comparison operators for graphs based on the two above functions.
+- **Graph::operator==, operator>=, operator<, operator<=, operator!=:** Comparison operators for graphs based on the function above.
 - **Graph::operator+(const int scalar), operator-(const int scalar), operator++(), operator--():** Implements unary and binary operators for scalar operations and increment/decrement operations.
 - **operator+(const int scalar, const Graph& matrix), operator-(const int scalar, const Graph& matrix):** Performs addition and subtraction between a scalar and a graph, respectively.
 - **Graph::operator+, operator-:** Implements unary plus and minus operators for graphs.
